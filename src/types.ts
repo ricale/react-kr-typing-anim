@@ -1,4 +1,6 @@
-export type TypingProps = React.HTMLAttributes<HTMLDivElement> & {
+import { HTMLAttributes } from 'react';
+
+export type TypingProps = HTMLAttributes<HTMLDivElement> & {
   /**
    * 애니메이션에 사용될 문구. `str` 혹은 `children` 둘 중 하나는 값이 있어야 한다.
    */

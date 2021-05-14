@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { FC, useEffect, useState, useMemo } from 'react';
 import * as Hangul from 'hangul-js';
 
 import { TypingProps } from './types';
@@ -47,7 +47,7 @@ const getClassName = (
   return baseClassName;
 }
 
-const Typing = ({
+const Typing: FC<TypingProps> = ({
   str,
   children,
   speed = 100,
@@ -59,7 +59,7 @@ const Typing = ({
   Tag = 'p',
   onDone,
   ...props
-}: TypingProps) => {
+}) => {
   const source = (children || str);
   if(typeof source !== 'string') {
     throw new Error("children or str must be string");
