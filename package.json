@@ -1,22 +1,23 @@
 {
   "dependencies": {
-    "hangul-js": "^0.2.6",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "hangul-js": "^0.2.6"
   },
   "name": "react-kr-typing-anim",
   "version": "0.1.0",
   "main": "dist/main.js",
-  "typings": "src/index.d.ts",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
-    "@types/react": "^17.0.5",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.1.2",
     "typescript": "^4.2.4",
@@ -44,7 +45,9 @@
     "koeran",
     "typing",
     "animation",
-    "typewriter"
+    "typewriter",
+    "react",
+    "react-component"
   ],
   "homepage": "https://github.com/ricale/react-kr-typing-amin#readme",
   "description": ""

@@ -11,6 +11,8 @@ module.exports = {
   devtool: isDevelopment ? 'cheap-module-source-map' : 'source-map',
   output: {
     path: path.resolve(__dirname, './dist'),
+    libraryTarget: "umd",
+    library: 'test'
   },
   module: {
     rules: [
