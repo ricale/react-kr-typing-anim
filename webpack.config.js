@@ -25,7 +25,7 @@ module.exports = {
           {
             test: /\.css$/,
             // loader: ,
-            use: isDevelopment ? ['style-loader', 'css-loader'] : 'css-loader'
+            use: ['style-loader', 'css-loader']
           }
         ]
       }
