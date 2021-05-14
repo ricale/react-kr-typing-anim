@@ -14,10 +14,10 @@
 
 @keyframes blinkCursor {
   from {
-    border-right-color: white;
+    border-right-color: currentColor;
   }
   50% {
-    border-right-color: white;
+    border-right-color: currentColor;
   }
   51% {
     border-right-color: transparent;
@@ -31,7 +31,7 @@
 .typing_fixed.typing_with-cursor > .typing__result::after {
   content: '';
   margin-right: -1px;
-  border-right: 1px solid white;
+  border-right: 1px solid currentColor;
 }
 .typing_volatile.typing_with-blinking-cursor::after,
 .typing_fixed.typing_with-blinking-cursor > .typing__result::after {

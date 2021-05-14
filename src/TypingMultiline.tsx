@@ -9,14 +9,25 @@ const getSource = (source: string | string[] | undefined) => {
   }
 }
 
-type TypingMultilineProps = Omit<TypingProps, 'str' | 'children'> & {
-  lines?: string | string[]
+export type TypingMultilineProps = {
+  /**
+   * 애니메이션에 사용될 문구들.
+   * string[] 이거나 `\n` 문자를 갖고 있는 string 이어야 한다.
+   * `strs` 혹은 `children` 둘 중 하나는 값이 있어야 한다.
+   */
   strs?: string | string[]
+  /**
+   * 애니메이션에 사용될 문구들.
+   * string[] 이거나 `\n` 문자를 갖고 있는 string 이어야 한다.
+   * `strs` 혹은 `children` 둘 중 하나는 값이 있어야 한다.
+   */
   children?: string | string[]
+  /**
+   * 컨테이너 엘리먼트에 사용될 태그
+   */
   ContainerTag?: TypingProps['Tag']
-}
+} & Omit<TypingProps, 'str' | 'children'>
 const TypingMultiline = ({
-  lines,
   strs,
   children,
   ContainerTag,
@@ -32,9 +43,9 @@ const TypingMultiline = ({
 
   ...props
 }: TypingMultilineProps) => {
-  const source = getSource(lines || strs || children);
+  const source = getSource(strs || children);
   if(!Array.isArray(source)) {
-    throw new Error("children, strs or lines must be string[]");
+    throw new Error("children or strs must be string[]");
   }
   const [active, setActive] = useState(0);
   const onDoneItem = useCallback((idx: number) => {
