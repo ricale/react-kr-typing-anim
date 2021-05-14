@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 
-import TypingMultiline, { TypingMultilineProps } from '../TypingMultiline';
+import TypingMultiline from '../TypingMultiline';
+import { TypingMultilineProps } from '../types';
 
 export default {
   title: 'Example/TypingMultiline',

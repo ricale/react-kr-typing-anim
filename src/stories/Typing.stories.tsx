@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 
-import Typing, { TypingProps } from '../Typing';
+import Typing from '../Typing';
+import { TypingProps } from '../types';
 
 export default {
   title: 'Example/Typing',

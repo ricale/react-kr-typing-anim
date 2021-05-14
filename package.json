@@ -1,11 +1,13 @@
 {
   "dependencies": {
     "hangul-js": "^0.2.6",
-    "react": "^17.0.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "name": "react-kr-typing-amin",
   "version": "0.1.0",
   "main": "dist/main.js",
+  "typings": "src/types.ts",
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@storybook/addon-actions": "^6.2.9",
