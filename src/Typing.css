@@ -1,0 +1,45 @@
+.typing {
+  position: relative;
+}
+
+.typing__source {
+  opacity: 0;
+}
+
+.typing__result {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: currentColor;
+  }
+  50% {
+    border-right-color: currentColor;
+  }
+  51% {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.typing_volatile.typing_with-cursor::after,
+.typing_fixed.typing_with-cursor > .typing__result::after {
+  content: '';
+  margin-right: -1px;
+  border-right: 1px solid currentColor;
+}
+.typing_volatile.typing_with-blinking-cursor::after,
+.typing_fixed.typing_with-blinking-cursor > .typing__result::after {
+  content: '';
+
+  margin-left: 2px;
+  margin-right: -3px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  animation: blinkCursor 1s infinite;
+}
