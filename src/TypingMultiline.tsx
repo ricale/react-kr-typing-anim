@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useState } from 'react';
+import { FC, Fragment, useCallback, useState } from 'react';
 
 import Typing from './Typing';
 import { TypingMultilineProps } from './types';
@@ -11,7 +11,7 @@ const getSource = (source: string | string[] | undefined) => {
   }
 }
 
-const TypingMultiline = ({
+const TypingMultiline: FC<TypingMultilineProps> = ({
   strs,
   children,
   ContainerTag,
@@ -26,7 +26,7 @@ const TypingMultiline = ({
   Tag,
 
   ...props
-}: TypingMultilineProps) => {
+}) => {
   const source = getSource(strs || children);
   if(!Array.isArray(source)) {
     throw new Error("children or strs must be string[]");

@@ -34,6 +34,6 @@ module.exports = {
     extensions: ['', '.ts', '.tsx', '.js']
   },
   plugins: isProfile ? [
-     new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin()
   ] : undefined
 }
