@@ -4,7 +4,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
-  "name": "react-kr-typing-amin",
+  "name": "react-kr-typing-anim",
   "version": "0.1.0",
   "main": "dist/main.js",
   "typings": "src/types.ts",
