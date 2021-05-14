@@ -1,5 +1,7 @@
 import { Fragment, useCallback, useState } from 'react';
-import Typing, { TypingProps } from './Typing';
+
+import Typing from './Typing';
+import { TypingMultilineProps } from './types';
 
 const getSource = (source: string | string[] | undefined) => {
   if(typeof source === 'string') {
@@ -9,24 +11,6 @@ const getSource = (source: string | string[] | undefined) => {
   }
 }
 
-export type TypingMultilineProps = {
-  /**
-   * 애니메이션에 사용될 문구들.
-   * string[] 이거나 `\n` 문자를 갖고 있는 string 이어야 한다.
-   * `strs` 혹은 `children` 둘 중 하나는 값이 있어야 한다.
-   */
-  strs?: string | string[]
-  /**
-   * 애니메이션에 사용될 문구들.
-   * string[] 이거나 `\n` 문자를 갖고 있는 string 이어야 한다.
-   * `strs` 혹은 `children` 둘 중 하나는 값이 있어야 한다.
-   */
-  children?: string | string[]
-  /**
-   * 컨테이너 엘리먼트에 사용될 태그
-   */
-  ContainerTag?: TypingProps['Tag']
-} & Omit<TypingProps, 'str' | 'children'>
 const TypingMultiline = ({
   strs,
   children,
