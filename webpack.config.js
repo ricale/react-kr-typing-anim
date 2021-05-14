@@ -11,8 +11,7 @@ module.exports = {
   devtool: isDevelopment ? 'cheap-module-source-map' : 'source-map',
   output: {
     path: path.resolve(__dirname, './dist'),
-    libraryTarget: "umd",
-    library: 'test'
+    libraryTarget: "commonjs2",
   },
   module: {
     rules: [
@@ -34,6 +33,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.ts', '.tsx', '.js']
+  },
+  externals: {
+    react: 'commonjs react',
+   'react-dom': 'commonjs react-dom',
   },
   plugins: isProfile ? [
     new BundleAnalyzerPlugin()

@@ -25,6 +25,10 @@
     "webpack-bundle-analyzer": "^4.4.1",
     "webpack-cli": "^4.7.0"
   },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
