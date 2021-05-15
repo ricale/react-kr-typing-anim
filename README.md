@@ -8,6 +8,10 @@
 yarn add react-kr-typing-anim
 ```
 
+## 문서 및 예제
+
+[Storybook](http://ricale.kr/react-kr-typing-anim/)
+
 ## 사용
 
 ```js
