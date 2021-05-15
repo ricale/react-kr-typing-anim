@@ -1,11 +1,11 @@
 {
-  "dependencies": {
-    "hangul-js": "^0.2.6"
-  },
   "name": "react-kr-typing-anim",
   "version": "0.1.0",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
+  "dependencies": {
+    "hangul-js": "^0.2.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@storybook/addon-actions": "^6.2.9",
@@ -40,7 +40,10 @@
     "type": "git",
     "url": "git+https://github.com/ricale/react-kr-typing-amin.git"
   },
-  "author": "ricale",
+  "author": {
+    "name": "ricale",
+    "email": "kim.kangseong@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ricale/react-kr-typing-amin/issues"
